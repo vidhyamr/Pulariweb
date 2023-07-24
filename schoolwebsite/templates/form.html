@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+  <form type="form"action="POST">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Enter your name"><br>
+    <input type="date" name="dob" placeholder="DOB"><br>
+    <input type="number" name="age" placeholder="Enter your age"><br>
+    <label for="gender">Select your gender</label><br>
+    <select id="gender" name="gender">
+        <option value="none" selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">other</option>
+    </select><br>
+        <input type="number" name="number" placeholder="Enter your phonenumber"><br>
+        <input type="email" name="email" placeholder="Enter your email"><br>
+        <textarea rows="4" cols="20" placeholder="Enter your address"></textarea><br>
+
+<select>
+    <option value=""
+            selected="selected">Select dept</option>
+    <optgroup label="Commerce">
+        <option value="BBA">BBA</option>
+        <option value="BCOM">BCOM</option>
+        <option value="MBA">MBA</option>
+    </optgroup>
+    <optgroup label="Arts">
+        <option value="BA english">BA English</option>
+        <option value="BA Malayalam">BA Malayalam</option>
+        <option value="MA Malayalam">MA Malayalam</option>
+    </optgroup>
+    <optgroup label="Computer science ">
+        <option value="BCA">BCA</option>
+        <option value="MCA">MCA</option>
+    </optgroup>
+    <optgroup label="Electronics">
+        <option value="BSC electronics">BSC electronics</option>
+        <option value="MSc electronic">MSc electronic</option>
+    </optgroup>
+    <optgroup label="Food Technology">
+        <option value="BSc Food Technology">BSc Food Technology</option>
+        <option value="Msc Food Technology">Msc Food Technology</option>
+    </optgroup>
+</select><br>
+
+      <label for="Purpose">Select your Purpose</label><br>
+    <select id="Purpose" name="Purpose">
+        <option value="none" selected>Purpose</option>
+        <option value="Exam">Exam</option>
+        <option value="Admission">Admission</option>
+        <option value="Visit">Visit</option>
+    </select>
+
+<p>Materials provide</p>
+      <input type="checkbox"name="mat" value="Book">Book
+      <input type="checkbox"name="mat" value="Pdf">Pdf
+      <input type="checkbox"name="mat" value="Pen">pen
+      <input type="checkbox"name="mat" value="Notes">Notes<br><br>
+
+      <button onclick="myfun()">Submit</button>
+      <script>
+          function myfun() {
+           confirm("Your registration is done!")
+            }
+      </script>
+        </form><br>
+<div class="mx-auto">
+    <a  class="btn btn-secondary" href="{% url 'loginapp:logout' %}">Logout</a>
+
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </form>
+</body>
+</html>
